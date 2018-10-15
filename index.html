@@ -25,7 +25,32 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<pre><code class="line-numbers" data-trim>
+						/**
+						 * Example Code.
+						 */
+						function my_example_code($line_numbers = TRUE) {
+						  $message = 'This example code does';
+						  $message .= ($line_numbers ? '' : ' not');
+						  $message .= ' have line numbers.';
+						
+						  return $message;
+						}
+						
+						print my_example_code(TRUE);
+						</code></pre>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					  ## Page title
+					  A paragraph with some text and a [link](//hakim.se).
+					</script>
+					  <code class="line-numbers" data-trim>
+					  code
+					  </code>
+					  
+				  </section>
 			</div>
 		</div>
 
@@ -41,6 +66,7 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+					{src: 'plugin/line-numbers/line-numbers.js'},
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
